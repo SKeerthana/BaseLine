@@ -3,7 +3,7 @@
  */
 public class SalesTaxCalculator {
 
-    private double roundOffValue;
+    private double roundOffValue = 0.05f;
 
     public double calculateSalesTax(Item item)
     {
@@ -14,7 +14,7 @@ public class SalesTaxCalculator {
 
     public double roundoffSalesTax(double taxAmount)
     {
-        return 0.0;
+        return Math.ceil(taxAmount / roundOffValue) * roundOffValue;
     }
 
 }
