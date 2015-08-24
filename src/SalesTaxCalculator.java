@@ -5,7 +5,7 @@ public class SalesTaxCalculator {
 
     private double roundOffValue = 0.05f;
 
-    public double calculateSalesTax(double price)
+    public double calculateSalesTax(Item item)
     {
         double result = 0.0;
         roundoffSalesTax(result);

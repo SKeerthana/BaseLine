@@ -45,8 +45,8 @@ public class ShoppingCart {
         int numberOfItems = Integer.valueOf(inputItem.substring(0, inputItem.indexOf(" ")));
         String itemName = inputItem.substring(inputItem.indexOf(" ") + 1, inputItem.lastIndexOf(" "));
         double priceWithoutTax = Double.parseDouble(inputItem.substring(inputItem.lastIndexOf(" ") + 1));
-        double priceWithTax = taxCalculator.calculateSalesTax(priceWithoutTax);
-        Item item = new Item(itemName,priceWithoutTax, priceWithTax,numberOfItems);
+        Item item = new Item(itemName,priceWithoutTax,numberOfItems);
+        double priceWithTax = taxCalculator.calculateSalesTax(item);
         return item;
     }
 

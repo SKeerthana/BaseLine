@@ -8,13 +8,11 @@ public class Item {
     private double priceWithTax;
     private int numberofItems;
 
-    public Item(String itemName, double priceWithoutTax, double priceWithTax, int numberofItems) {
+    public Item(String itemName, double priceWithoutTax, int numberofItems) {
         this.itemName = itemName;
         this.priceWithoutTax = priceWithoutTax;
-        this.priceWithTax = priceWithTax;
         this.numberofItems = numberofItems;
     }
-
 
     public String getItemName(){
         return itemName;
@@ -32,4 +30,8 @@ public class Item {
         return numberofItems;
     }
 
+    public void setpriceWithTax(double priceWithTax)
+    {
+        this.priceWithTax = priceWithTax;
+    }
 }
