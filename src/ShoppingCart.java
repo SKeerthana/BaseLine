@@ -30,12 +30,14 @@ public class ShoppingCart {
     {
         shoppingCartItems = new LinkedList<>();
         taxCalculator = new SalesTaxCalculator();
+        salesTax = 0.0;
+        totalAmount = 0;
     }
     public void addItemToShoppingCart(String inputString){
         Item item = generateItem(inputString);
         shoppingCartItems.add(item);
-        generateSalesTax();
-        generateTotal();
+        generateSalesTax(item);
+        generateTotal(item);
     }
 
     public void removeItemToShoppingCart(Item item){
@@ -52,14 +54,14 @@ public class ShoppingCart {
         return item;
     }
 
-    public void generateSalesTax()
+    public void generateSalesTax(Item item)
     {
-
+        //set sales tex
     }
 
-    public void generateTotal()
+    public void generateTotal(Item item)
     {
-
+        totalAmount += item.getPriceWithTax();
     }
 
 }
