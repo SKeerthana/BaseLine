@@ -35,7 +35,7 @@ public class ShoppingCart {
         Item item = generateItem(inputString);
         shoppingCartItems.add(item);
         generateSalesTax();
-        getTotalAmount();
+        generateTotal();
     }
 
     public void removeItemToShoppingCart(Item item){
