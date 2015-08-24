@@ -4,12 +4,13 @@
 public class Item {
 
     private String itemName;
-    private double price;
+    private double priceWithoutTax;
+    private double priceWithTax;
     private int numberofItems;
 
     public Item(String itemName, double price, int numberofItems) {
         this.itemName = itemName;
-        this.price = price;
+        this.priceWithoutTax = price;
         this.numberofItems = numberofItems;
     }
 
@@ -17,8 +18,12 @@ public class Item {
         return itemName;
     }
 
-    public double getPrice(){
-        return price;
+    public double getPriceWithoutTax(){
+        return priceWithoutTax;
+    }
+
+    public double getPriceWithTax(){
+        return priceWithTax;
     }
 
     public int getNumberOfItems(){
