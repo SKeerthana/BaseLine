@@ -18,8 +18,6 @@ public class Client {
             while (!(inputItem = sc.nextLine()).equals("")){
                 shoppingCart.addItemToShoppingCart(inputItem);
             }
-
-
         }
     }
 
