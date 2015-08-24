@@ -16,15 +16,9 @@ public class Client {
         {
             ShoppingCart shoppingCart = new ShoppingCart();
             while (!(inputItem = sc.nextLine()).equals("")){
-                Item item = generateItem(inputItem);
-                shoppingCart.addItemToShoppingCart(item);
+                shoppingCart.addItemToShoppingCart(inputItem);
             }
         }
-    }
-
-    public static Item generateItem(String inputItem)
-    {
-        
     }
 
 }
